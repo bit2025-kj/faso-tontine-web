@@ -1,0 +1,116 @@
+.onboarding-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(13, 27, 42, 0.55);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 200;
+}
+
+@media (min-width: 640px) {
+  .onboarding-backdrop {
+    align-items: center;
+  }
+}
+
+.onboarding-panel {
+  width: 100%;
+  max-width: 420px;
+  max-height: 92svh;
+  overflow-y: auto;
+  background: var(--white);
+  border-radius: 20px 20px 0 0;
+  padding: 2rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 640px) {
+  .onboarding-panel {
+    border-radius: 20px;
+  }
+}
+
+.onboarding-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.75rem;
+  padding: 0 0.5rem;
+}
+
+.onboarding-image {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+.onboarding-title {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.onboarding-body {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+.onboarding-dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin: 1.5rem 0 1.25rem;
+}
+
+.onboarding-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  background: var(--border);
+  transition: width 0.25s ease, background 0.25s ease;
+}
+
+.onboarding-dot-active {
+  width: 22px;
+  background: var(--primary-solid);
+}
+
+.onboarding-actions {
+  display: flex;
+  align-items: center;
+}
+
+.onboarding-spacer {
+  flex: 1;
+}
+
+.onboarding-skip {
+  background: none;
+  border: none;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  cursor: pointer;
+  padding: 0.6rem 0.4rem;
+}
+
+.onboarding-next {
+  background: var(--primary-solid);
+  color: var(--white);
+  border: none;
+  border-radius: 12px;
+  padding: 0.7rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.onboarding-next:hover {
+  filter: brightness(1.05);
+}

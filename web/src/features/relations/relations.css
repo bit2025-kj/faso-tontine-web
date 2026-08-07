@@ -1,0 +1,99 @@
+.relations-search-input {
+  width: 100%;
+  padding: 0.65rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  margin-bottom: 1rem;
+  background: var(--white);
+  color: var(--ink);
+}
+
+.relations-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.relations-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.6rem 0.9rem;
+}
+
+.relations-user {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: var(--ink);
+  padding: 0;
+}
+
+.relations-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--primary-pale);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+  overflow: hidden;
+  flex: none;
+}
+
+.relations-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.relations-actions {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.relations-action {
+  border: none;
+  border-radius: 8px;
+  background: var(--primary-solid);
+  color: white;
+  font-size: 0.8rem;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+}
+
+.relations-action-secondary {
+  background: var(--surface);
+  color: var(--ink-soft);
+}
+
+.relations-action:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.relations-suggestion-identity {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  text-align: left;
+}
+
+.relations-suggestion-reason {
+  font-size: 0.72rem;
+  color: var(--ink-soft);
+}

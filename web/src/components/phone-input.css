@@ -1,0 +1,34 @@
+.phone-input {
+  display: flex;
+  gap: 0;
+}
+
+.phone-input-country {
+  flex: 0 0 auto;
+  width: 6.5rem;
+  padding: 0.65rem 0.4rem;
+  border: 1px solid #e5e7eb;
+  border-right: none;
+  border-radius: 10px 0 0 10px;
+  color: #0d1b2a;
+  background: #ffffff;
+  font-size: 0.85rem;
+}
+
+.phone-input-local {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0 10px 10px 0;
+  color: #0d1b2a;
+  background: #ffffff;
+}
+
+.phone-input-country:focus,
+.phone-input-local:focus {
+  outline: 2px solid #0f766e;
+  outline-offset: 1px;
+  z-index: 1;
+  position: relative;
+}

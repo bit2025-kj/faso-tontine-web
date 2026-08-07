@@ -1,0 +1,123 @@
+/*
+ * Reproduction exacte de TontineDesign.pageGradient (Tontinier,
+ * lib/tontine/ui/widgets/tontine_ui.dart) : primary (#0f766e) puis secondary
+ * (#10b981). Toujours en clair pour l'instant, quel que soit le thème
+ * système (voir index.css).
+ */
+.auth-screen {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: linear-gradient(
+    180deg,
+    rgba(15, 118, 110, 0.08) 0%,
+    rgba(16, 185, 129, 0.05) 45%,
+    var(--surface) 100%
+  );
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 380px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 2rem 1.75rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+.auth-logo {
+  width: 44px;
+  height: 44px;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.auth-card h1 {
+  font-size: 1.35rem;
+  margin: 0 0 1.25rem;
+  color: #14532d;
+}
+
+.auth-lede {
+  margin: 0 0 1.25rem;
+  color: #4b5a52;
+  font-size: 0.92rem;
+}
+
+.auth-notice {
+  margin: 0 0 1rem;
+  padding: 0.6rem 0.8rem;
+  background: #dcfce7;
+  color: #14532d;
+  border-radius: 8px;
+  font-size: 0.88rem;
+}
+
+.auth-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  color: #4b5a52;
+}
+
+.auth-field input,
+.auth-field select {
+  padding: 0.65rem 0.75rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  color: #0d1b2a;
+  background: #ffffff;
+}
+
+.auth-field input:focus,
+.auth-field select:focus {
+  outline: 2px solid #0f766e;
+  outline-offset: 1px;
+}
+
+.auth-error {
+  margin: 0 0 1rem;
+  color: var(--danger);
+  font-size: 0.85rem;
+}
+
+.auth-hint {
+  font-size: 0.75rem;
+  color: #8a9490;
+}
+
+.auth-submit {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 12px;
+  /* Couleur pleine, pas un dégradé : chez Tontinier, FilledButton n'a pas de
+     fond personnalisé dans filledButtonThemeData, donc Material3 applique
+     colorScheme.primary tel quel (#0f766e). */
+  background: #0f766e;
+  color: white;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.auth-submit:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.auth-link {
+  display: block;
+  margin: 0.75rem auto 0;
+  background: none;
+  border: none;
+  color: #4b5a52;
+  font-size: 0.82rem;
+  cursor: pointer;
+  text-decoration: underline;
+}

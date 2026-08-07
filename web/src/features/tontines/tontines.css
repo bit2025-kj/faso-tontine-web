@@ -1,0 +1,250 @@
+.tontine-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.history-entry {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.history-entry summary {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1rem;
+  cursor: pointer;
+  list-style: none;
+  font-size: 0.9rem;
+}
+
+.history-entry summary::-webkit-details-marker {
+  display: none;
+}
+
+.history-entry summary span:first-child {
+  flex: 1;
+  font-weight: 600;
+}
+
+.history-entry-amount {
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+}
+
+.history-entry-chevron {
+  color: var(--ink-soft);
+  transition: transform 0.2s;
+}
+
+.history-entry[open] .history-entry-chevron {
+  transform: rotate(180deg);
+}
+
+.history-entry-body {
+  padding: 0 1rem 1rem;
+}
+
+.tontine-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.tontine-card-main h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1rem;
+}
+
+.tontine-card-meta {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+}
+
+.tontine-card-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.3rem;
+  flex: none;
+}
+
+.tontine-card-amount {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--primary);
+}
+
+.tontine-card-status {
+  font-size: 0.72rem;
+  color: var(--ink-soft);
+  background: var(--surface);
+  border-radius: 999px;
+  padding: 0.15rem 0.6rem;
+}
+
+.tontine-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
+  border: none;
+  background: none;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 0.5rem;
+}
+
+.tontine-summary {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.25rem 1rem;
+}
+
+.tontine-summary > div {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9rem;
+}
+
+.tontine-summary > div:last-child {
+  border-bottom: none;
+}
+
+.tontine-summary dt {
+  color: var(--ink-soft);
+}
+
+.tontine-summary dd {
+  margin: 0;
+  font-weight: 500;
+}
+
+.tontine-plain-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.tontine-plain-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9rem;
+}
+
+.tontine-plain-list li:last-child {
+  border-bottom: none;
+}
+
+.tontine-me {
+  background: var(--primary-pale);
+}
+
+.tontine-withdrawal {
+  color: var(--danger);
+}
+
+.tontine-penalty {
+  margin-top: 1rem;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.tontine-penalty h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0 0 0.4rem;
+  font-size: 0.95rem;
+  color: var(--danger);
+}
+
+.tontine-penalty-hint {
+  margin: 0 0 0.75rem;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+}
+
+.tontine-penalty-form {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.tontine-penalty-form input {
+  flex: 1;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--ink);
+}
+
+.tontine-penalty-form button {
+  border: none;
+  background: var(--primary-solid);
+  color: white;
+  border-radius: 10px;
+  padding: 0.55rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tontine-penalty-form button:disabled {
+  background: var(--border);
+  cursor: default;
+}
+
+.tontine-penalty-result {
+  display: flex;
+  gap: 0.75rem;
+  margin: 0.9rem 0 0;
+}
+
+.tontine-penalty-result > div {
+  flex: 1;
+  background: var(--surface);
+  border-radius: 10px;
+  padding: 0.6rem;
+  text-align: center;
+}
+
+.tontine-penalty-result dt {
+  font-size: 0.72rem;
+  color: var(--ink-soft);
+}
+
+.tontine-penalty-result dd {
+  margin: 0.15rem 0 0;
+  font-weight: 700;
+  color: var(--danger);
+}

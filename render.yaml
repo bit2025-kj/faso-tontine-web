@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: faso-tontine-web
+    runtime: node
+    # Not scoped with `rootDir:` — the build command needs both web/ and
+    # bff/ as siblings, and bff/dist/main.js locates the built frontend at
+    # runtime via a relative ../../web/dist path.
+    buildCommand: cd web && npm install && npm run build && cd ../bff && npm install && npm run build
+    startCommand: cd bff && npm run start:prod
+    plan: free
+
+    envVars:
+      # The existing FastAPI backend (tontine-backend service) — untouched,
+      # called server-to-server from the BFF, never from the browser, so its
+      # CORS whitelist (ALLOWED_ORIGINS_CSV) doesn't need this app added.
+      - key: FASTAPI_BASE_URL
+        value: https://tontine-backend-qoti.onrender.com
+
+      # Signs nothing security-critical today (see auth/auth.controller.ts —
+      # the session cookie itself isn't HMAC-signed), kept for any future use
+      # of cookie-parser's signing support.
+      - key: SESSION_SECRET
+        generateValue: true
+
+      - key: NODE_ENV
+        value: production

@@ -1,0 +1,74 @@
+.kyc-form {
+  max-width: 460px;
+}
+
+.kyc-lede {
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+  margin: 0 0 1.25rem;
+}
+
+.kyc-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
+.kyc-field input,
+.kyc-field select {
+  padding: 0.6rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--ink);
+  background: var(--white);
+}
+
+.kyc-error {
+  color: var(--danger);
+  font-size: 0.85rem;
+  margin: 0 0 1rem;
+}
+
+.kyc-submit {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 12px;
+  background: var(--primary-solid);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.kyc-submit:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.kyc-status-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem;
+}
+
+.kyc-status-pending {
+  background: var(--primary-pale);
+  color: var(--primary);
+}
+
+.kyc-status-rejected {
+  background: rgba(239, 68, 68, 0.12);
+  color: var(--danger);
+}
+
+.kyc-status-approved {
+  background: rgba(16, 185, 129, 0.12);
+  color: var(--success);
+}

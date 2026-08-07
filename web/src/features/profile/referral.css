@@ -1,0 +1,86 @@
+.referral-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.referral-lede {
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  margin: 0 0 1rem;
+}
+
+.referral-code {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--primary-pale);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+}
+
+.referral-code span {
+  font-family: ui-monospace, Consolas, monospace;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: 0.05em;
+}
+
+.referral-code button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  border: none;
+  background: var(--primary-solid);
+  color: white;
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.referral-share-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  width: 100%;
+  margin-top: 0.75rem;
+  border: 1px solid var(--border);
+  background: var(--white);
+  color: var(--primary);
+  border-radius: 10px;
+  padding: 0.65rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.referral-stats {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.referral-stats > div {
+  flex: 1;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.85rem;
+  text-align: center;
+}
+
+.referral-stats strong {
+  display: block;
+  font-size: 1.4rem;
+  color: var(--primary);
+}
+
+.referral-stats span {
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+}
