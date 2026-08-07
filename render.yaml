@@ -5,7 +5,12 @@ services:
     # Not scoped with `rootDir:` — the build command needs both web/ and
     # bff/ as siblings, and bff/dist/main.js locates the built frontend at
     # runtime via a relative ../../web/dist path.
-    buildCommand: cd web && npm install && npm run build && cd ../bff && npm install && npm run build
+    #
+    # `--include=dev` est indispensable : NODE_ENV=production (ci-dessous, requis
+    # au runtime) fait normalement sauter les devDependencies à `npm install`,
+    # or les outils de build (vite, typescript, @vitejs/plugin-react, @nestjs/cli)
+    # y sont — sans ce flag, le build échoue sur "Cannot find module 'vite'".
+    buildCommand: cd web && npm install --include=dev && npm run build && cd ../bff && npm install --include=dev && npm run build
     startCommand: cd bff && npm run start:prod
     plan: free
 
