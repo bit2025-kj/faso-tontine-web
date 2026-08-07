@@ -14,9 +14,12 @@ async function bootstrap() {
   const config = app.get(ConfigService);
 
   // Derrière le proxy de Render : sans ça, `req.ip` (utilisé par le
-  // rate-limiter) vaut l'IP du proxy, pas celle du navigateur — le throttling
-  // par utilisateur ne fonctionnerait pas. On fait confiance au premier hop.
-  app.set('trust proxy', 1);
+  // rate-limiter) vaut l'IP du proxy, pas celle du navigateur — tous les
+  // clients partageraient alors un seul quota. Render peut avoir plusieurs
+  // hops, donc `trust proxy: 1` ne suffit pas (il résout vers une IP de proxy
+  // partagée) : `true` prend l'IP d'origine (extrémité gauche de
+  // X-Forwarded-For), ce qui isole enfin le rate-limit par navigateur.
+  app.set('trust proxy', true);
 
   app.use(cookieParser(config.get<string>('SESSION_SECRET')));
   app.useGlobalPipes(new ValidationPipe({ whitelist: true, transform: true }));
